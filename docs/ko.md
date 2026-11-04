@@ -19,11 +19,16 @@ RPG Plus의 2레벨 도적, 철검 장착:
 **전투 능력치**(그룹 *Combat*)는 능력치에서 계산됩니다:
 
 ```json
-{ "Id": "hp",  "Formula": "12 + vit * 3 + level * 2", "Binds": "health" },
-{ "Id": "mp",  "Formula": "int * 2 + level * 2", "Pool": true },
-{ "Id": "atk", "Formula": "str + level", "Binds": "attack" },
-{ "Id": "def", "Formula": "floor(vit / 2)", "Binds": "defence" },
-{ "Id": "mag", "Formula": "int + level" }
+{
+  "Kind": "stat",
+  "Items": [
+    { "Id": "hp",  "Formula": "12 + vit * 3 + level * 2", "Binds": "health" },
+    { "Id": "mp",  "Formula": "int * 2 + level * 2", "Pool": true },
+    { "Id": "atk", "Formula": "str + level", "Binds": "attack" },
+    { "Id": "def", "Formula": "floor(vit / 2)", "Binds": "defence" },
+    { "Id": "mag", "Formula": "int + level" }
+  ]
+}
 ```
 
 체력, 공격, 방어는 전투 수치가 됩니다. 마나는 스킬이 소모하며 회복됩니다.

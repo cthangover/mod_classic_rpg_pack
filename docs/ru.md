@@ -19,11 +19,16 @@ Classic RPG Rules — набор правил: внутри нет кода, т�
 **Боевые статы** (группа *Combat*) вычисляются из характеристик:
 
 ```json
-{ "Id": "hp",  "Formula": "12 + vit * 3 + level * 2", "Binds": "health" },
-{ "Id": "mp",  "Formula": "int * 2 + level * 2", "Pool": true },
-{ "Id": "atk", "Formula": "str + level", "Binds": "attack" },
-{ "Id": "def", "Formula": "floor(vit / 2)", "Binds": "defence" },
-{ "Id": "mag", "Formula": "int + level" }
+{
+  "Kind": "stat",
+  "Items": [
+    { "Id": "hp",  "Formula": "12 + vit * 3 + level * 2", "Binds": "health" },
+    { "Id": "mp",  "Formula": "int * 2 + level * 2", "Pool": true },
+    { "Id": "atk", "Formula": "str + level", "Binds": "attack" },
+    { "Id": "def", "Formula": "floor(vit / 2)", "Binds": "defence" },
+    { "Id": "mag", "Formula": "int + level" }
+  ]
+}
 ```
 
 Здоровье, атака и защита становятся боевыми числами; ману тратят навыки, и она восстанавливается.

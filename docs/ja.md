@@ -19,11 +19,16 @@ RPG Plus のレベル 2 盗賊、鉄の剣を装備：
 **戦闘ステータス**（グループ *Combat*）は能力値から計算されます：
 
 ```json
-{ "Id": "hp",  "Formula": "12 + vit * 3 + level * 2", "Binds": "health" },
-{ "Id": "mp",  "Formula": "int * 2 + level * 2", "Pool": true },
-{ "Id": "atk", "Formula": "str + level", "Binds": "attack" },
-{ "Id": "def", "Formula": "floor(vit / 2)", "Binds": "defence" },
-{ "Id": "mag", "Formula": "int + level" }
+{
+  "Kind": "stat",
+  "Items": [
+    { "Id": "hp",  "Formula": "12 + vit * 3 + level * 2", "Binds": "health" },
+    { "Id": "mp",  "Formula": "int * 2 + level * 2", "Pool": true },
+    { "Id": "atk", "Formula": "str + level", "Binds": "attack" },
+    { "Id": "def", "Formula": "floor(vit / 2)", "Binds": "defence" },
+    { "Id": "mag", "Formula": "int + level" }
+  ]
+}
 ```
 
 体力・攻撃・防御は戦闘値になります。MP はスキルが消費し、回復します。

@@ -19,11 +19,16 @@ Mọi con số đều đến từ gói luật này. Nhanh nhẹn của đạo t�
 **Chỉ số chiến đấu** (nhóm *Combat*) được suy ra từ thuộc tính:
 
 ```json
-{ "Id": "hp",  "Formula": "12 + vit * 3 + level * 2", "Binds": "health" },
-{ "Id": "mp",  "Formula": "int * 2 + level * 2", "Pool": true },
-{ "Id": "atk", "Formula": "str + level", "Binds": "attack" },
-{ "Id": "def", "Formula": "floor(vit / 2)", "Binds": "defence" },
-{ "Id": "mag", "Formula": "int + level" }
+{
+  "Kind": "stat",
+  "Items": [
+    { "Id": "hp",  "Formula": "12 + vit * 3 + level * 2", "Binds": "health" },
+    { "Id": "mp",  "Formula": "int * 2 + level * 2", "Pool": true },
+    { "Id": "atk", "Formula": "str + level", "Binds": "attack" },
+    { "Id": "def", "Formula": "floor(vit / 2)", "Binds": "defence" },
+    { "Id": "mag", "Formula": "int + level" }
+  ]
+}
 ```
 
 Máu, tấn công và phòng thủ trở thành các con số chiến đấu; mana bị kỹ năng tiêu hao và được hồi lại.

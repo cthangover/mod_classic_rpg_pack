@@ -19,11 +19,16 @@ Every number comes from this pack. Agility is the rogue's `8 + level * 2` = 12. 
 **Combat stats** (group *Combat*), computed from the attributes:
 
 ```json
-{ "Id": "hp",  "Formula": "12 + vit * 3 + level * 2", "Binds": "health" },
-{ "Id": "mp",  "Formula": "int * 2 + level * 2", "Pool": true },
-{ "Id": "atk", "Formula": "str + level", "Binds": "attack" },
-{ "Id": "def", "Formula": "floor(vit / 2)", "Binds": "defence" },
-{ "Id": "mag", "Formula": "int + level" }
+{
+  "Kind": "stat",
+  "Items": [
+    { "Id": "hp",  "Formula": "12 + vit * 3 + level * 2", "Binds": "health" },
+    { "Id": "mp",  "Formula": "int * 2 + level * 2", "Pool": true },
+    { "Id": "atk", "Formula": "str + level", "Binds": "attack" },
+    { "Id": "def", "Formula": "floor(vit / 2)", "Binds": "defence" },
+    { "Id": "mag", "Formula": "int + level" }
+  ]
+}
 ```
 
 Health, attack and defence become the battle numbers; mana is spent by skills and refilled.
