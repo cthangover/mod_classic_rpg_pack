@@ -56,7 +56,7 @@ RPG Plus 中一名手持铁剑的 2 级盗贼：
 
 ```json
 { "Id": "classic/fireball", "Type": "ToEnemy",
-  "Values": [ "RequiredPoint=1", "Cost=mp:4", "Pierce=1", "Formula=a.mag * 2 + rand(1, 6)" ] }
+  "Values": [ "RequiredPoint>=0.1.0", "Cost=mp:4", "Pierce>=0.1.0", "Formula=a.mag * 2 + rand(1, 6)" ] }
 ```
 
 - Power strike: `a.atk * 1.5 + rand(0, a.str / 2)`.
