@@ -4,6 +4,6 @@
   "version": "0.1.0",
   "author": "ct",
   "description": "A ready set of classic fantasy rules as data: six attributes, three classes, equipment slots, gear and four formula skills. RPG Plus is built on it.",
-  "category": "gameplay, characters, visual",
+  "categories": ["gameplay", "characters", "visual"],
   "depends": ["stats_base>=0.1.0", "equipment>=0.1.0", "items_base>=0.1.0", "characters_base>=0.1.0"]
 }
